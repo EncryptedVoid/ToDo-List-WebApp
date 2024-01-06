@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 
-  font-family: "sans-serif";
+  font-family: "Raleway", sans-serif;
 
   list-style: none;
 
@@ -13,17 +13,9 @@ body {
   background: url(./assets/central_background.png);
   background-size: cover;
   background-repeat: no-repeat;
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(10px);
 
   padding: 10px;
-}
-
-.page-title {
-  margin: 2rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .heart {
@@ -31,7 +23,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 
-  gap: 1rem;
+  gap: 0.25rem;
 
   margin: 2rem;
 }
@@ -41,9 +33,9 @@ body {
 
   background-color: #1d1e24;
 
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 2rem;
-  border: 0.4rem dashed rgba(255, 255, 255, 0.1);
+  border: 0.3rem dashed rgba(255, 255, 255, 0.6);
 }
 
 .tasks-list {
@@ -52,14 +44,7 @@ body {
   gap: 1rem;
 }
 
-.header {
-  margin-bottom: 1rem;
-  background-color: lightcoral;
-  border-radius: 1rem;
-  padding: 0.75rem;
-}
-
-.header span {
+.header .magnitude {
   margin-left: 0.4rem;
   background-color: white;
   border-radius: 0.5rem;
@@ -67,6 +52,8 @@ body {
   padding-right: 0.5rem;
   color: black;
   width: 1rem;
+
+  font-size: auto;
 }
 
 .tasks-list li article {
@@ -75,8 +62,16 @@ body {
   gap: 1rem;
 
   background-color: #2a2b2f;
-  padding: 1.3rem;
+  padding: 1rem;
   border-radius: 1rem;
+  border: 0.2rem solid rgba(255, 255, 255, 0.1);
+
+  transition: all 0.2s ease;
+}
+
+.tasks-list li article:hover {
+  box-shadow: 10px 10px 20px 0px rgba(255, 255, 255, 0.3);
+  transform: translateY(-0.25rem) translateX(-0.25rem);
 }
 
 .edit-option {
@@ -87,6 +82,9 @@ body {
 
 .edit-option:hover {
   opacity: 100%;
+
+  width: 10px;
+  height: 10px;
 }
 
 .additional-information {
@@ -95,10 +93,112 @@ body {
   gap: 1rem;
 }
 
-.additional-information h3 {
-  background-color: lightskyblue;
+.additional-information .deadline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, rgb(82, 210, 202), rgb(28, 102, 107));
   border-radius: 0.75rem;
+  border: 0.2rem solid rgb(32, 135, 128);
+
   padding: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.additional-information .difficulty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, rgb(210, 82, 97), rgb(107, 28, 40));
+
+  border: 0.2rem solid rgb(96, 2, 2);
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.75rem;
+}
+
+.tasks-title {
+  font-size: 1rem;
+}
+
+.task-description {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+
+  padding: 0.4rem;
+
+  border-radius: 10px;
+  border: 2px solid #3b3c40;
+}
+
+.backloged-tasks {
+  background: url(./assets/backlog_list_background.png);
+  background-size: fill;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(4rem) opacity(40%);
+}
+
+.active-tasks {
+  background: url(./assets/active_tasks_background.png);
+  background-size: fill;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(4rem) opacity(40%);
+}
+
+.completed-tasks {
+  background: url(./assets/completed_tasks_background.png);
+  background-size: fill;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(4rem) opacity(40%);
+}
+
+.upcoming-tasks {
+  background: url(./assets/upcoming_tasks_background.png);
+  background-size: fill;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(4rem) opacity(40%);
+}
+
+.backloged-tasks .header {
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, rgb(80, 158, 184), rgb(7, 125, 165));
+  border: 0.3rem solid rgb(48, 112, 133);
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+
+.active-tasks .header {
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, rgb(208, 170, 2), rgb(204, 172, 28));
+  border: 0.3rem solid rgb(183, 138, 14);
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+
+.completed-tasks .header {
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, rgb(32, 178, 117), rgb(10, 148, 90));
+  border: 0.3rem solid rgb(20, 130, 93);
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+
+.upcoming-tasks .header {
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, rgb(76, 32, 178), rgb(55, 12, 155));
+  border: 0.3rem solid rgb(57, 20, 130);
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 2, "opsz" 60;
+  font-size: 50px; /* Adjust the size as needed */
+  margin: 2px;
 }
