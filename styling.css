@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: "sans-serif";
+
+  list-style: none;
+
+  color: white;
+}
+
+body {
+  background: url(./assets/central_background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(1rem);
+
+  padding: 10px;
+}
+
+.page-title {
+  margin: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin: 2rem;
+}
+
+.chamber {
+  margin: 1rem;
+
+  background-color: #1d1e24;
+
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 0.4rem dashed rgba(255, 255, 255, 0.1);
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header {
+  margin-bottom: 1rem;
+  background-color: lightcoral;
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+
+.header span {
+  margin-left: 0.4rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: black;
+  width: 1rem;
+}
+
+.tasks-list li article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  background-color: #2a2b2f;
+  padding: 1.3rem;
+  border-radius: 1rem;
+}
+
+.edit-option {
+  opacity: 0;
+
+  transition: all 0.4s ease;
+}
+
+.edit-option:hover {
+  opacity: 100%;
+}
+
+.additional-information {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.additional-information h3 {
+  background-color: lightskyblue;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
